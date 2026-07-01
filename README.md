@@ -85,7 +85,7 @@ services.AddOptiLanguageMaster(o =>
 
 | CMS | .NET target |
 |-----|-------------|
-| Optimizely CMS 12 | net6.0 / net8.0 |
+| Optimizely CMS 12 | net6.0 / net8.0 / net10.0 |
 | Optimizely CMS 13 | net10.0 |
 
 ---

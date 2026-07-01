@@ -14,7 +14,14 @@ Multi-provider translation add-on for Optimizely CMS 12 and 13. An alternative t
   | `MP.LanguageMaster.Cms` | CMS 13 (`EPiServer` 13.0.0 – 13.x) | net10.0 |
   | `MP.LanguageMaster.Commerce` | Commerce 14 (`EPiServer.Commerce` 14.5.0 – 14.x) | net6.0, net8.0 |
 
-  ¹ CMS 12 on .NET 10 requires `<OlmCmsVersion>12</OlmCmsVersion>` in .csproj of the host project.
+  ¹ When running **CMS 12 on .NET 10**, add <OlmCmsVersion> to your host `.csproj` so the package uses CMS 12 references and routing:
+  
+  ```xml
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OlmCmsVersion>12</OlmCmsVersion>
+  </PropertyGroup>
+  ```
 
   
 ## Install

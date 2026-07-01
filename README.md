@@ -6,6 +6,17 @@ Multi-provider translation add-on for Optimizely CMS 12 and 13. An alternative t
 
 ---
 
+## CMS compatibility
+
+| Package | Optimizely version | .NET |
+  |---|---|---|
+  | `MP.LanguageMaster.Cms` | CMS 12 (`EPiServer.CMS.Core` 12.5.0 – 12.x) | net6.0, net8.0, net10.0¹ |
+  | `MP.LanguageMaster.Cms` | CMS 13 (`EPiServer` 13.0.0 – 13.x) | net10.0 |
+  | `MP.LanguageMaster.Commerce` | Commerce 14 (`EPiServer.Commerce` 14.5.0 – 14.x) | net6.0, net8.0 |
+
+  ¹ CMS 12 on .NET 10 requires `<OlmCmsVersion>12</OlmCmsVersion>` in .csproj of the host project.
+
+  
 ## Install
 
 ```
@@ -79,13 +90,4 @@ services.AddOptiLanguageMaster(o =>
 });
 ```
 
----
 
-## CMS compatibility
-
-| CMS | .NET target |
-|-----|-------------|
-| Optimizely CMS 12 | net6.0 / net8.0 / net10.0 |
-| Optimizely CMS 13 | net10.0 |
-
----

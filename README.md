@@ -1,6 +1,6 @@
-# OptiLanguageMaster
+# MP.LanguageMaster
 
-Multi-provider translation add-on for Optimizely CMS 12 and 13. Replaces the native Language Manager with a content tree UI, multiple translation backends, per-item publish control, routing rules, async jobs with real-time progress, translation memory, and a full audit log.
+Multi-provider translation add-on for Optimizely CMS 12 and 13. An alternative to the native Labsl.LanguageManager with a content tree UI, multiple translation backends, per-item publish control, routing rules, async jobs with real-time progress, translation memory, and a full audit log.
 
 **Providers**: DeepL · Azure Cognitive Services · OpenAI · Google Cloud · Anthropic Claude · ModernMT · Amazon Translate · Smartling · Custom
 
@@ -75,7 +75,7 @@ Requires `CmsAdmins` by default. Override with any role:
 services.AddOptiLanguageMaster(o =>
 {
     o.SqlConnectionString = ...;
-    o.AuthorizedRoles = ["WebAdmins", "Editors"];
+    o.AuthorizedRoles = ["Editors"];
 });
 ```
 

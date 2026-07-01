@@ -89,7 +89,3 @@ services.AddOptiLanguageMaster(o =>
 | Optimizely CMS 13 | net10.0 |
 
 ---
-
-## Source & issues
-
-[https://github.com/mattpallatt/OptiLanguageMaster](https://github.com/mattpallatt/OptiLanguageMaster)

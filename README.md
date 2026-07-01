@@ -22,7 +22,7 @@ dotnet add package MP.LanguageMaster.Commerce
 
 ## Setup
 
-**1. Register services** in `Program.cs`
+**1. Register services** in `StartUp.cs`
 
 ```csharp
 services.AddOptiLanguageMaster(o =>
@@ -39,7 +39,7 @@ services.AddDataProtection()
 services.AddOptiLanguageMasterCommerce();
 ```
 
-**2. Map the SignalR hub** in `Program.cs`
+**2. Map the SignalR hub** in `StartUp.cs`
 
 ```csharp
 app.UseEndpoints(e =>

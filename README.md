@@ -48,21 +48,6 @@ services.AddOptiLanguageMaster(o =>
     o.SqlConnectionString = configuration.GetConnectionString("EPiServerDB");
 });
 
-// Prevents credential loss on app restart.
-// Local development:
-services.AddDataProtection()
-    .PersistKeysToFileSystem(new DirectoryInfo(@"C:\keys\olm"))
-    .SetApplicationName("OptiLanguageMaster");
-
-// Optimizely DXP / Azure — use Blob Storage instead of the local file system.
-// Requires: dotnet add package Microsoft.AspNetCore.DataProtection.AzureStorage
-var blobClient = new BlobContainerClient(
-    configuration.GetConnectionString("EPiServerAzureBlobs"), "dataprotection");
-blobClient.CreateIfNotExists();
-services.AddDataProtection()
-    .PersistKeysToAzureBlobStorage(blobClient.GetBlobClient("olm-keys.xml"))
-    .SetApplicationName("OptiLanguageMaster");
-
 // Optional — Commerce catalog support
 services.AddOptiLanguageMasterCommerce();
 ```

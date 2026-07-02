@@ -59,6 +59,14 @@ services.AddOptiLanguageMasterCommerce();
 
 **2. Map the SignalR hub** in `StartUp.cs`
 
+Add the required using:
+
+```csharp
+using OptiLanguageMaster.Infrastructure;
+```
+
+Then map the hub:
+
 ```csharp
 app.UseEndpoints(e =>
 {
